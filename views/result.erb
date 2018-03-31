@@ -11,12 +11,6 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script>
-            function playSound(name){
-                var audio = new Audio('./wav/'+<%= @type %>+'.wav');
-                audio.play();
-            }
-        </script>
     </head>
     <body>
         <div class="main-container">
@@ -31,6 +25,11 @@
                 <h3>Fan recreation.</h3>
                 <h3>All these characters, the minigame, the system font and all sound and graphic design are copyrighted by<a href="https://www.nintendo.com/games/detail/super-mario-bros-deluxe-3ds">Nintendo</a>.</h3>
                 <h3>Click <a href="https://www.nintendo.com/games/detail/super-mario-bros-deluxe-3ds">here</a> to find more info about the original title that this minigame appeared in, and after that, BUY IT ON THE 3DS eShop! Please don't sue me Nintendo.</h3>
+        <script>
+            console.log( './wav/'+<%= @type %>+'.wav');
+            var audio = new Audio('./wav/'+<%= @type %>+'.wav');
+            audio.play();
+        </script>
             </footer>
         </div>
 
