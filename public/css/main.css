@@ -1,0 +1,425 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    width: 100%;
+    height: 100%;
+    clip: auto;
+    position: absolute;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.header-container {
+    border-bottom: 20px solid #e44d26;
+}
+
+.header-container,
+.main aside {
+    background: #f16529;
+}
+
+.title {
+    color: black;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+footer {
+    font-size:12px;
+}
+
+.footer-container footer {
+    color: black;
+    padding: 150px 0;
+}
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+    font-family: "tloz_links_awakeningregular";
+    src: url("./tloz.woff") format("woff");
+}
+
+body{   
+    font-family: 'tloz_links_awakeningregular';
+    background: #F8E090;
+}
+
+.flipped{
+    transform: scaleX(-1);
+}
+
+.float-left{
+    float:left;
+}
+
+.float-right{
+    float:right;
+}
+
+.circle-container {
+  position: relative;
+  width: 40em;
+  height: 40em;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+  margin: 5em auto 0;
+}
+
+.circle-container > * {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -4em;
+  width: 8em;
+  height: 8em;
+}
+
+.circle-container > *:nth-of-type(1) {
+  -webkit-transform: rotate(0deg) translate(15em) rotate(0deg);
+          transform: rotate(0deg) translate(15em) rotate(0deg);
+}
+.circle-container > *:nth-of-type(2) {
+  -webkit-transform: rotate(60deg) translate(15em) rotate(-60deg);
+          transform: rotate(60deg) translate(15em) rotate(-60deg);
+}
+.circle-container > *:nth-of-type(3) {
+  -webkit-transform: rotate(120deg) translate(15em) rotate(-120deg);
+          transform: rotate(120deg) translate(15em) rotate(-120deg);
+}
+.circle-container > *:nth-of-type(4) {
+  -webkit-transform: rotate(180deg) translate(15em) rotate(-180deg);
+          transform: rotate(180deg) translate(15em) rotate(-180deg);
+}
+.circle-container > *:nth-of-type(5) {
+  -webkit-transform: rotate(240deg) translate(15em) rotate(-240deg);
+          transform: rotate(240deg) translate(15em) rotate(-240deg);
+}
+.circle-container > *:nth-of-type(6) {
+  -webkit-transform: rotate(300deg) translate(15em) rotate(-300deg);
+          transform: rotate(300deg) translate(15em) rotate(-300deg);
+}
+.circle-container > *:nth-of-type(7) {
+  -webkit-transform: translate(-2em);
+          transform: translate(-2em);
+}
+
+@-webkit-keyframes animated_border{
+    12% { content: url("../img/frame0.png"); }
+    25% { content: url("../img/frame1.png"); }
+    37% { content: url("../img/frame2.png"); }
+    50% { content: url("../img/frame3.png"); }
+    62% { content: url("../img/frame4.png"); }
+    75% { content: url("../img/frame5.png"); }
+    87% { content: url("../img/frame6.png"); }
+    100% { content: url("../img/frame7.png"); }
+}
+
+@keyframes animated_border{
+    12% { content: url("../img/frame0.png"); }
+    25% { content: url("../img/frame1.png"); }
+    37% { content: url("../img/frame2.png"); }
+    50% { content: url("../img/frame3.png"); }
+    62% { content: url("../img/frame4.png"); }
+    75% { content: url("../img/frame5.png"); }
+    87% { content: url("../img/frame6.png"); }
+    100% { content: url("../img/frame7.png"); }
+}
+
+@-webkit-keyframes animated_marquee{
+    0% { content: url("../img/marquee0.png"); }
+    33% { content: url("../img/marquee1.png"); }
+    66% { content: url("../img/marquee2.png"); }
+    100% { content: url("../img/marquee0.png"); }
+}
+
+@keyframes animated_marquee{
+    0% { content: url("../img/marquee0.png"); }
+    33% { content: url("../img/marquee1.png"); }
+    66% { content: url("../img/marquee2.png"); }
+    100% { content: url("../img/marquee0.png"); }
+}
+
+.animated-marquee{
+    -webkit-animation: animated_marquee 0.4s infinite;
+    animation: animated_marquee 0.4s infinite;
+}
+
+.circle-container .card:hover {
+    -webkit-animation: animated_border 0.5s infinite;
+    animation: animated_border 0.5s infinite;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

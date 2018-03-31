@@ -1,0 +1,6 @@
+{
+  "name": "SMBDX Fortune Telling",
+  "description": "Find your fortune...",
+  "repository": "https://github.com/nullset2/smbdxfortune",
+  "keywords": ["ruby", "sinatra", "mario", "rng"]
+}
