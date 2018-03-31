@@ -3,16 +3,10 @@ require "sinatra/reloader" if development?
 require "pg"
 require "byebug"
 
-db = URI.parse(ENV["DATABASE_URL"] || "postgres://localhost/smbdxfortunes_development")
-
 db_params = {
-  host: db.host,
-  user: db.getUserInfo().split(":")[0],
-  password: db.getUserInfo().split(":")[1],
-  database: db.database
+  dbname: "smbdxfortunes_development",
+  port: 5432
 }
-
-@conn = PG::Connection.new(db_params)
 
 #Root
 get "/" do
@@ -20,16 +14,16 @@ get "/" do
 end
 
 #Result
-get '/result' do
-  @val = rand
+get "/result" do
+  val = rand
 
-  @type = 1 if @val.between?(0.00,0.05)
-  @type = 2 if @val.between?(0.05,0.20)
-  @type = 3 if @val.between?(0.20,0.40)
-  @type = 4 if @val.between?(0.40,0.70)
-  @type = 5 if @val.between?(0.70,1.00)
+  @type = 1 if val <= 0.05
+  @type = 2 if val > 0.05 && val <= 0.20
+  @type = 3 if val > 0.20 && val <= 0.40
+  @type = 4 if val > 0.40 && val <= 0.70
+  @type = 5 if val > 0.70
 
-  @conn.exec_params("SELECT * FROM Fortunes WHERE type_id=$1 ORDER BY RANDOM() LIMIT 1", [@type])
-
+  @conn = PG::Connection.new(db_params)
+  @result = @conn.exec_params("SELECT type_id, content FROM Fortunes WHERE type_id=$1 ORDER BY RANDOM() LIMIT 1", [@type])
   erb :result
 end
