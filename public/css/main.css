@@ -220,6 +220,16 @@ body{
     animation: animated_border 0.5s infinite;
 }
 
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-centered{
+    text-align: center;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
