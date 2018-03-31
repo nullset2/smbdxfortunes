@@ -13,7 +13,7 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script>
             function playSound(name){
-                var audio = new Audio('./wav/'+<%= @result[:type_id] %>+'.wav');
+                var audio = new Audio('./wav/'+<%= @type %>+'.wav');
                 audio.play();
             }
         </script>
@@ -21,8 +21,8 @@
     <body>
         <div class="main-container">
             <div class="main wrapper">
-                <img src="img/<%= @result[:type_id] %>.png"/>
-                <h1><%= @result[:content] %></h1>
+                <img src="img/<%= @type %>.png" class="centered"/>
+                <h1 class="text-centered"><%= @result.getvalue(0,1) %></h1>
             </div>
         </div>
 
