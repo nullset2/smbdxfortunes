@@ -10,21 +10,41 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
+        <style type="text/css">
+            body{
+                background-color: #fff;
+                background-image: url("/img/fortune_bg_texture.png") !important;
+                background-repeat: repeat;
+            }
+
+            .white-bg{
+                background-color: #fff;
+            }
+
+            .main-container .wrapper{
+                margin: 0px;
+                width: 100%;
+            }
+
+        </style>
+
         <script src="../public/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <div class="main-container">
             <div class="main wrapper">
                 <img src="img/<%= @type %>.png" class="centered"/>
-                <h1 class="text-centered"><%= @result.getvalue(0,1) %></h1>
+                <h1 class="text-centered white-bg smaller-section"><%= @result.getvalue(0,1) %></h1>
             </div>
         </div>
 
         <div class="footer-container">
             <footer class="wrapper">
+                <div class="white-bg">
                 <h3>Fan recreation.</h3>
                 <h3>All these characters, the minigame, the system font and all sound and graphic design are copyrighted by<a href="https://www.nintendo.com/games/detail/super-mario-bros-deluxe-3ds">Nintendo</a>.</h3>
                 <h3>Click <a href="https://www.nintendo.com/games/detail/super-mario-bros-deluxe-3ds">here</a> to find more info about the original title that this minigame appeared in, and after that, BUY IT ON THE 3DS eShop! Please don't sue me Nintendo.</h3>
+                </div>
         <script>
             var audio = new Audio('./wav/'+<%=@type%>+'.wav');
             audio.play();
