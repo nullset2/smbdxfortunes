@@ -1,11 +1,9 @@
 function doExitRoutine(){
-    playSound('fortune_opening');
-    setTimeout(redirect(), 3000);
+	playSound('fortune_opening');
     animateMarquee();
-}
-
-function redirect(){
-    window.location = "/result";
+    setTimeout(function() {
+    	window.location = "/result";
+	}, 3000);
 }
 
 function playSound(name){
