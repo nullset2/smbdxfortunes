@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Boom!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="../public/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <div class="main-container">
@@ -26,14 +26,11 @@
                 <h3>All these characters, the minigame, the system font and all sound and graphic design are copyrighted by<a href="https://www.nintendo.com/games/detail/super-mario-bros-deluxe-3ds">Nintendo</a>.</h3>
                 <h3>Click <a href="https://www.nintendo.com/games/detail/super-mario-bros-deluxe-3ds">here</a> to find more info about the original title that this minigame appeared in, and after that, BUY IT ON THE 3DS eShop! Please don't sue me Nintendo.</h3>
         <script>
-            console.log( './wav/'+<%= @type %>+'.wav');
-            var audio = new Audio('./wav/'+<%= @type %>+'.wav');
+            var audio = new Audio('./wav/'+<%=@type%>+'.wav');
             audio.play();
-        </script>
+         </script>
             </footer>
         </div>
-
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
