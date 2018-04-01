@@ -14,7 +14,7 @@ if development?
   host = "localhost"
 else
   uri = URI.parse(ENV["DATABASE_URL"])
-  dbname = "smbdxfortunes_production"
+  dbname = uri.path[1..-1]
   username = uri.user
   password = uri.password
   host = uri.host
