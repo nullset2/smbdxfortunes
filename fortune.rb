@@ -3,8 +3,28 @@ require "sinatra/reloader" if development?
 require "pg"
 require "byebug"
 
+dbanme = nil
+password = nil
+host = nil
+
+if development? 
+  dbname = "smbdxfortunes_development"
+  username = "alfredo"
+  password = ""
+  host = "localhost"
+else
+  uri = URI.parse(ENV["DATABASE_URL"])
+  dbname = "smbdxfortunes_production"
+  username = uri.user
+  password = uri.password
+  host = uri.host
+end
+
 db_params = {
-  dbname: "smbdxfortunes_development",
+  dbname: dbname,
+  user: username,
+  password: password,
+  host: host,
   port: 5432
 }
 
