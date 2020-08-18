@@ -20,7 +20,7 @@ function doExitRoutine(){
     animateMarquee();
     setTimeout(function() {
     	window.location = "/result";
-	}, 4000);
+	}, 5000);
 }
 
 function playSound(name){
