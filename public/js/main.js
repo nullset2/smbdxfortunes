@@ -1,5 +1,22 @@
+Array.from(document.querySelectorAll(".card")).forEach(
+	function(el) {
+		el.addEventListener("click", cardClickListener);
+		el.addEventListener("mouseover", cardMouseoverListener);
+	}
+);
+
+function cardClickListener(e) {
+	e.preventDefault();
+    playSound('fortune_opening');
+    doExitRoutine();
+}
+
+function cardMouseoverListener(e) {
+	e.preventDefault();
+    playSound('fortune_pick_option');
+}
+
 function doExitRoutine(){
-	playSound('fortune_opening');
     animateMarquee();
     setTimeout(function() {
     	window.location = "/result";
