@@ -1,4 +1,4 @@
-CREATE TABLE Fortunes(type_id integer NOT NULL, content varchar(40), created_at timestamp DEFAULT current_timestamp, updated_at timestamp DEFAULT current_timestamp);
+CREATE TABLE Fortunes(type_id integer NOT NULL, content varchar(40));
 
 INSERT INTO Fortunes 
 VALUES (1, 'With a Fire Flower you''ll beat Bowser.'),
