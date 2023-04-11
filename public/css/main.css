@@ -127,7 +127,6 @@ body{
 
 .circle-container {
   position: relative;
-  width: 40em;
   height: 40em;
   border-radius: 50%;
   padding: 0;
@@ -234,7 +233,19 @@ body{
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) and (max-width:  844px) {
+
+.circle-container {
+  position: relative;
+  height: 40em;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+  margin: 5em auto 0;
+  -webkit-transform: scale(0.7);
+  transform:  scale(0.7);
+}
+
 
 /* ====================
     INTERMEDIATE: Menu
@@ -269,7 +280,18 @@ body{
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width:  844px) {
+
+    .circle-container {
+  position: relative;
+  height: 40em;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+  margin: 5em auto 0;
+  -webkit-transform: scale(0.7);
+  transform:  scale(0.7);
+}
 
 /* ====================
     WIDE: CSS3 Effects
@@ -320,6 +342,20 @@ body{
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
     }
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 844px) {
+        .circle-container {
+          position: relative;
+          height: 40em;
+          border-radius: 50%;
+          padding: 0;
+          list-style: none;
+          margin: 5em auto 0;
+          -webkit-transform: scale(0.7);
+          transform:  scale(0.7);
+        }
 }
 
 /* ==========================================================================
