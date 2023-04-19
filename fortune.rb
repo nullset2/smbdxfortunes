@@ -2,13 +2,13 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'sqlite3'
 
-#Root
-get '/' do
-  File.read(File.join('public', 'index.html'))
+set :static, true
+
+get '/smbdxfortunes' do
+  File.read(File.join(settings.public_folder, 'index.html'))
 end
 
-#Result
-get '/result' do
+get '/smbdxfortunes/result' do
   val = rand
 
   @type = 1 if val <= 0.05

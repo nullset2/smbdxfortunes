@@ -19,7 +19,7 @@ function cardMouseoverListener(e) {
 function doExitRoutine(){
     animateMarquee();
     setTimeout(function() {
-    	window.location = "/result";
+    	window.location = "/smbdxfortunes/result";
 	}, 5000);
 }
 

@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/normalize.min.css">
+        <link rel="stylesheet" href="/css/main.css">
 
         <style type="text/css">
             body{
@@ -40,20 +40,20 @@
             }
 
             .themed-button:hover {
-                content: url("img/button1.png");
+                content: url("/img/button1.png");
             }
 
         </style>
 
-        <script src="../public/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <div class="main-container">
             <div class="main wrapper">
-                <img src="img/<%= @type %>.png" class="centered"/>
+                <img src="/img/<%= @type %>.png" class="centered"/>
                 <h1 class="text-centered white-bg"><%= @result.first.first %></h1>
 
-                <div class="extended"><a href="/"><img src="img/button0.png" class="centered themed-button" /></a></div>
+                <div class="extended"><a href="/smbdxfortunes"><img src="/img/button0.png" class="centered themed-button" /></a></div>
             </div>
         </div>
 
@@ -65,7 +65,7 @@
                 <h3>Click <a href="https://www.nintendo.com/games/detail/super-mario-bros-deluxe-3ds">here</a> to find more info about the original title that this minigame appeared in, and after that, BUY IT ON THE 3DS eShop! Please don't sue me Nintendo.</h3>
                 </div>
         <script>
-            var audio = new Audio('./wav/'+<%=@type%>+'.wav');
+            var audio = new Audio('/wav/'+<%=@type%>+'.wav');
             audio.play();
          </script>
             </footer>
