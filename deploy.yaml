@@ -16,13 +16,10 @@ spec:
       labels:
         app: smbdxfortunes
     spec:
-      volumes:
-      - name: tz-config
-        hostPath:
-          path: /etc/localtime
       containers:
       - name: smbdxfortunes
         image: nullset2/smbdxfortunes:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - name: web
           containerPort: 4567
@@ -54,6 +51,10 @@ spec:
   rules:
   - http:
       paths:
+      - path: /
+        backend:
+          serviceName: smbdxfortunes
+          servicePort: 80
       - path: /smbdxfortunes
         backend:
           serviceName: smbdxfortunes
