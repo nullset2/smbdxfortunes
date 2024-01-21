@@ -55,13 +55,13 @@ spec:
         backend:
           serviceName: smbdxfortunes
           servicePort: 80
-      - path: /smbdxfortunes
-        backend:
-          serviceName: smbdxfortunes
-          servicePort: 80
       - path: /pixy
         backend:
           serviceName: pixy
+          servicePort: 80
+      - path: /blog
+        backend:
+          serviceName: simple-grails-blog
           servicePort: 80
   tls:
     - secretName: nullset2-tls
