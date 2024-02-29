@@ -5,7 +5,7 @@ GEM
     mini_portile2 (2.8.1)
     multi_json (1.13.1)
     mustermann (1.0.2)
-    rack (2.0.4)
+    rack (2.2.8.1)
     rack-protection (2.0.1)
       rack
     sinatra (2.0.1)
