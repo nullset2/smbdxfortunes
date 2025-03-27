@@ -38,33 +38,35 @@ spec:
   selector:
     app: smbdxfortunes
 ---
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nullset2-ingress
+  name: smbdxfortunes-ingress
   annotations:
-    kubernetes.io/ingress.class: traefik
     cert-manager.io/cluster-issuer: letsencrypt-prod
     traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
     traefik.frontend.rule.type: PathPrefix
 spec:
+  ingressClassName: traefik
   rules:
-  - http:
+  - host: ${DOMAIN}
+    http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: smbdxfortunes
-          servicePort: 80
-      - path: /pixy
+          service:
+            name: smbdxfortunes
+            port:
+              number: 80
+      - path: /smbdxfortunes
+        pathType: Prefix
         backend:
-          serviceName: pixy
-          servicePort: 80
-      - path: /blog
-        backend:
-          serviceName: simple-grails-blog
-          servicePort: 80
+          service:
+            name: smbdxfortunes
+            port:
+              number: 80
   tls:
     - secretName: nullset2-tls
       hosts:
         - ${DOMAIN}
-
